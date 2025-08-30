@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
                 ocker
               </h1>
             </div>
-            
+
             {/* Desktop nav links */}
             <nav className="hidden md:flex flex-1 justify-center">
               <SignedIn>
@@ -62,11 +62,11 @@ export default function RootLayout({ children }) {
                 )}
               </SignedIn>
             </nav>
-            
+
             {/* Mobile menu button */}
             <SignedIn>
               {onDashboard && (
-                <button 
+                <button
                   className="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
@@ -97,40 +97,40 @@ export default function RootLayout({ children }) {
 
           {/* Mobile menu overlay */}
           {mobileMenuOpen && (
-            <div 
+            <div
               className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <div 
+              <div
                 className="fixed top-16 right-0 w-64 h-full bg-white shadow-lg z-50 p-6"
                 onClick={(e) => e.stopPropagation()}
               >
                 <SignedIn>
                   {onDashboard && (
                     <div className="flex flex-col gap-4 font-medium">
-                      <Link 
-                        href="/dashboard" 
+                      <Link
+                        href="/dashboard"
                         className="hover:text-orange-500 transition-colors py-2"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         Dashboard
                       </Link>
-                      <Link 
-                        href="/dashboard/questions" 
+                      <Link
+                        href="/questions"
                         className="hover:text-orange-500 transition-colors py-2"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         Questions
                       </Link>
-                      <Link 
-                        href="/dashboard/how-it-works" 
+                      <Link
+                        href="/how-it-works"
                         className="hover:text-orange-500 transition-colors py-2"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         How it Works
                       </Link>
-                      <Link 
-                        href="/dashboard/upgrade" 
+                      <Link
+                        href="/upgrade"
                         className="hover:text-orange-500 transition-colors py-2"
                         onClick={() => setMobileMenuOpen(false)}
                       >
